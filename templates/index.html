@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flight Prediction</title>
+    <style>
+        body {
+            background-color: #728FCE;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+        input {
+            width: 40%;
+        }
+
+        input[type=submit] {
+            background-color: #00ff00;
+            color: white;
+            width: 15%;
+        }
+
+        select {
+            width: 50%;
+        }
+
+        label {
+            font-size: 20px;
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Flight Delay Predictor</h1>
+    </center>
+    <center>
+        <p>ML Web App</p>
+    </center>
+    <center>
+        <div>
+            <section class="section-signup">
+                <form action="{{url_for('predict')}}" method="POST">
+                    <div class="input-field">
+                        <p class="range-field">
+                            <label for="Scheduled Time">Scheduled Time</label>
+                            <input type="range" id="scheduled_timeInput" name="SCHEDULED_TIME" min="0" max="600"
+                                value="0" step="10">
+                    </div>
+                    <br>
+                    <div class="input-field">
+                        <p class="range-field">
+                            <label for="Elapsed Time">Elapsed Time</label>
+                            <input type="range" id="elapsed_timeInput" name="ELAPSED_TIME" min="0" max="600" value="0"
+                                step="10">
+                    </div>
+                    <br>
+                    <div class="input-field">
+                        <p class="range-field">
+                            <label for="Wheels off">Wheels Off</label>
+                            <input type="range" id="Wheels_offInput" name="WHEELS_OFF" min="0" max="600" value="0"
+                                step="10">
+                    </div>
+                    <br>
+                    <div class="input-field">
+                        <p class="range-field">
+                            <label for="Departure Delay">Departure Delay</label>
+                            <input type="range" id="Departure_DelayInput" name="DEPARTURE_DELAY" min="0" max="100" value="0"
+                                step="5">
+                    </div>
+                    <br>
+
+                    <input type="submit" value="Predict" class="btn btn-small waves-effect waves-light btn-extend">
+                </form>
+                <br></br>
+                {{ prediction_text }}
+                </select>
+        </div>
+    </center>
+</body>
+
+</html>
