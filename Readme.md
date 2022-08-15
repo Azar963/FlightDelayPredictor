@@ -41,7 +41,7 @@ Flask is a micro web framework written in Python. It is classified as a microfra
 - To deplot it on the internet we have to deploy it on Heroku.
 
 ### Heroku
-We deploy our Flask app to [Heroku.com][https://flightd.herokuapp.com/predict].
+We deploy our Flask app to [Heroku.com][https://flightd.herokuapp.com/].
 
 We prepared the needed files to deploy our app sucessfully:
 - Procfile: Contains run statements for app file.
